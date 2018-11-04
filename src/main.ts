@@ -1,12 +1,12 @@
 import { VueConstructor } from 'vue';
 import { version } from '../package.json';
-import { pluralize } from './filters/pluralize';
+import { pluralizeFilter } from './filters/pluralize';
 
-export { pluralize } from './filters/pluralize';
+export { pluralizeFilter } from './filters/pluralize';
 
 export default {
   install(Vue: VueConstructor): void {
-    Vue.filter('pluralize', pluralize);
+    Vue.filter('pluralize', pluralizeFilter);
   },
   version
 };

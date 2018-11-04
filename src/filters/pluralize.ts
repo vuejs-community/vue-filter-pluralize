@@ -30,7 +30,7 @@ const pluralizeRule7 = (input: number, rules: string[]): string => {
   return rules[2];
 };
 
-export const pluralize = (langCode: string, input: number, rules: string[]) => {
+export const pluralizeFilter = (langCode: string, input: number, rules: string[]) => {
   input = Math.abs(input);
 
   switch (langCode) {
