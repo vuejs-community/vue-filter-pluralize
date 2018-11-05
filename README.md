@@ -62,8 +62,8 @@ Vue.use(VueFilterPluralize);
 - Vietnamese (vi)
 
 ### Plural rule #2 (2 forms)
-
-Not implemented
+- Brazilian Portuguese (pt-BR)
+- French (fr)
 
 ### Plural rule #3 (3 forms)
 
