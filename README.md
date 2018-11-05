@@ -36,8 +36,25 @@ Vue.use(VueFilterPluralize);
 Not implemented
 
 ### Plural rule #1 (2 forms)
-
-Not implemented
+- Basque (eu)
+- Catalan (ca)
+- Danish (da)
+- Dutch (nl)
+- English (en)
+- Estonian (et)
+- Faroese (fo)
+- Finnish (fi)
+- Frisian (fy)
+- German (de)
+- Greek (el)
+- Hebrew (he)
+- Hungarian (hu)
+- Italian (it)
+- Norwegian (nb)
+- Portuguese (pt)
+- Spanish (es)
+- Swedish (sv)
+- Vietnamese (vi)
 
 ### Plural rule #2 (2 forms)
 

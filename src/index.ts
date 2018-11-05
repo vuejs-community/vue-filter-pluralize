@@ -1,16 +1,46 @@
 import { VueConstructor } from 'vue';
 
-import packageJson from '../package.json';
+import { Locales } from './enums/locales';
+import { version } from '../package.json';
 
 class NotImplementedError extends Error {}
 
-export const pluralize = (locale: string, input: number, rules: string[]) => {
-  throw new NotImplementedError(`Method with locale ${locale} not implemented`);
+const pluralizeRule1 = (input: number, case0: string, case1: string): string => {
+  return input === 1 ? case0 : case1;
+}
+
+export const pluralize = (locale: string, input: number, cases: string[]) => {
+  input = Math.abs(input);
+
+  switch (locale) {
+    case Locales.Catalan:
+    case Locales.Danish:
+    case Locales.German:
+    case Locales.Greek:
+    case Locales.English:
+    case Locales.Spanish:
+    case Locales.Estonian:
+    case Locales.Basque:
+    case Locales.Finnish:
+    case Locales.Faroese:
+    case Locales.Frisian:
+    case Locales.Hebrew:
+    case Locales.Hungarian:
+    case Locales.Italian:
+    case Locales.Norwegian:
+    case Locales.Dutch:
+    case Locales.Portuguese:
+    case Locales.Swedish:
+    case Locales.Vietnamese:
+      return pluralizeRule1(input, cases[0], cases[1]);
+    default:
+      throw new NotImplementedError(`Method with locale ${locale} not implemented`);
+  }
 };
 
 export default {
   install(Vue: VueConstructor): void {
     Vue.filter('pluralize', pluralize);
   },
-  version: packageJson.version
+  version
 };
