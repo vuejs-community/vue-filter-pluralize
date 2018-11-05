@@ -127,7 +127,24 @@ const pluralizeRule9 = (input: number, case0: string, case1: string, case2: stri
   return case2;
 };
 
-export const pluralize = (locale: string, input: number, cases: string[]) => {
+const pluralizeRule10 = (input: number, case0: string, case1: string, case2: string, case3: string): string => {
+  input %= 100;
+  if (input === 1) {
+    return case0;
+  }
+
+  if (input === 2) {
+    return case1;
+  }
+
+  if (input === 3 || input === 4) {
+    return case2;
+  }
+
+  return case3;
+};
+
+export const pluralize = (locale: Locales, input: number, cases: string[]) => {
   input = Math.abs(input);
 
   switch (locale) {
@@ -182,6 +199,8 @@ export const pluralize = (locale: string, input: number, cases: string[]) => {
       return pluralizeRule8(input, cases[0], cases[1], cases[2]);
     case Locales.Polish:
       return pluralizeRule9(input, cases[0], cases[1], cases[2]);
+    case Locales.Slovenian:
+      return pluralizeRule10(input, cases[0], cases[1], cases[2], cases[3]);
     default:
       throw new NotImplementedError(`Method with locale ${locale} not implemented`);
   }

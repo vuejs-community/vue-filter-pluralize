@@ -94,39 +94,30 @@ Vue.use(VueFilterPluralize);
 - Polish (pl)
 
 ### Plural rule #10 (4 forms)
-
-Not implemented
+- Slovenian (sl)
 
 ### Plural rule #11 (5 forms)
-
 Not implemented
 
 ### Plural rule #12 (6 forms)
-
 Not implemented
 
 ### Plural rule #13 (4 forms)
-
 Not implemented
 
 ### Plural rule #14 (3 forms)
-
 Not implemented
 
 ### Plural rule #15 (2 forms)
-
 Not implemented
 
 ### Plural rule #16 (5 forms)
-
 Not implemented
 
 ### Plural rule #17 (2 forms)
-
 Not implemented
 
 ### Plural rule #18 (6 forms)
-
 Not implemented
 
 ## License
