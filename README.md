@@ -87,8 +87,8 @@ Vue.use(VueFilterPluralize);
 - Ukrainian (uk)
 
 ### Plural rule #8 (3 forms)
-
-Not implemented
+- Czech (cs)
+- Slovak (sk)
 
 ### Plural rule #9 (3 forms)
 

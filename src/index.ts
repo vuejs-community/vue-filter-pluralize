@@ -98,6 +98,18 @@ const pluralizeRule7 = (input: number, case0: string, case1: string, case2: stri
   return case2;
 };
 
+const pluralizeRule8 = (input: number, case0: string, case1: string, case2: string): string => {
+  if (input === 1) {
+    return case0;
+  }
+
+  if (input >= 2 && input <= 4) {
+    return case1;
+  }
+
+  return case2;
+};
+
 export const pluralize = (locale: string, input: number, cases: string[]) => {
   input = Math.abs(input);
 
@@ -148,6 +160,9 @@ export const pluralize = (locale: string, input: number, cases: string[]) => {
     case Locales.Serbian:
     case Locales.Ukrainian:
       return pluralizeRule7(input, cases[0], cases[1], cases[2]);
+    case Locales.Czech:
+    case Locales.Slovak:
+      return pluralizeRule8(input, cases[0], cases[1], cases[2]);
     default:
       throw new NotImplementedError(`Method with locale ${locale} not implemented`);
   }
