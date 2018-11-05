@@ -34,5 +34,7 @@ export enum Locales {
 
   GaelicScottish = 'gd',
 
-  Romanian = 'ro'
+  Romanian = 'ro',
+
+  Lithuanian = 'lt'
 }
