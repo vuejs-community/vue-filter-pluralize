@@ -7,15 +7,27 @@ class NotImplementedError extends Error {}
 
 const pluralizeRule0 = (input: number, case0: string): string => {
   return case0;
-}
+};
 
 const pluralizeRule1 = (input: number, case0: string, case1: string): string => {
   return input === 1 ? case0 : case1;
-}
+};
 
 const pluralizeRule2 = (input: number, case0: string, case1: string): string => {
   return (input === 0 || input === 1) ? case0 : case1;
-}
+};
+
+const pluralizeRule3 = (input: number, case0: string, case1: string, case2: string): string => {
+  if (input === 0) {
+    return case0;
+  }
+
+  if (input % 10 === 1 && input !== 11) {
+    return case1;
+  }
+
+  return case2;
+};
 
 export const pluralize = (locale: string, input: number, cases: string[]) => {
   input = Math.abs(input);
@@ -52,6 +64,8 @@ export const pluralize = (locale: string, input: number, cases: string[]) => {
     case Locales.French:
     case Locales.PortugueseBrazilian:
       return pluralizeRule2(input, cases[0], cases[1]);
+    case Locales.Latvian:
+      return pluralizeRule3(input, cases[0], cases[1], cases[2]);
     default:
       throw new NotImplementedError(`Method with locale ${locale} not implemented`);
   }

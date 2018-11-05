@@ -66,8 +66,8 @@ Vue.use(VueFilterPluralize);
 - French (fr)
 
 ### Plural rule #3 (3 forms)
-
-Not implemented
+- Latgalian
+- Latvian (lv)
 
 ### Plural rule #4 (4 forms)
 

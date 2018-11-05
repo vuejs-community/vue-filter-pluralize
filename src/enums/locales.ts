@@ -28,5 +28,7 @@ export enum Locales {
   Vietnamese = 'vi',
 
   French = 'fr',
-  PortugueseBrazilian = 'pt-BR'
+  PortugueseBrazilian = 'pt-BR',
+
+  Latvian = 'lv'
 }
