@@ -79,8 +79,12 @@ Vue.use(VueFilterPluralize);
 - Lithuanian (lt)
 
 ### Plural rule #7 (3 forms)
-
-Not implemented
+- Belarusian (be)
+- Bosnian (bs)
+- Croatian (hr)
+- Serbian (sk)
+- Russian (ru)
+- Ukrainian (uk)
 
 ### Plural rule #8 (3 forms)
 

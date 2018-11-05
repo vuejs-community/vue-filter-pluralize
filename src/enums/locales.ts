@@ -36,5 +36,12 @@ export enum Locales {
 
   Romanian = 'ro',
 
-  Lithuanian = 'lt'
+  Lithuanian = 'lt',
+
+  Belarusian = 'be',
+  Bosnian = 'bs',
+  Croatian = 'hr',
+  Russian = 'ru',
+  Serbian = 'sr',
+  Ukrainian = 'uk'
 }
