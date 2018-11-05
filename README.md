@@ -73,8 +73,7 @@ Vue.use(VueFilterPluralize);
 - Scottish Gaelic (gd)
 
 ### Plural rule #5 (3 forms)
-
-Not implemented
+- Romanian (ro)
 
 ### Plural rule #6 (3 forms)
 

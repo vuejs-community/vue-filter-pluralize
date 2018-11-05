@@ -43,7 +43,24 @@ const pluralizeRule4 = (input: number, case0: string, case1: string, case2: stri
   }
 
   return case3;
-}
+};
+
+const pluralizeRule5 = (input: number, case0: string, case1: string, case2: string): string => {
+  if (input === 1) {
+    return case0;
+  }
+
+  if (input === 0) {
+    return case1;
+  }
+
+  input %= 100;
+  if (input >= 1 && input <= 19) {
+    return case1;
+  }
+
+  return case2;
+};
 
 export const pluralize = (locale: string, input: number, cases: string[]) => {
   input = Math.abs(input);
@@ -84,6 +101,8 @@ export const pluralize = (locale: string, input: number, cases: string[]) => {
       return pluralizeRule3(input, cases[0], cases[1], cases[2]);
     case Locales.GaelicScottish:
       return pluralizeRule4(input, cases[0], cases[1], cases[2], cases[3]);
+    case Locales.Romanian:
+      return pluralizeRule5(input, cases[0], cases[1], cases[2]);
     default:
       throw new NotImplementedError(`Method with locale ${locale} not implemented`);
   }
