@@ -32,8 +32,13 @@ Vue.use(VueFilterPluralize);
 [Localization and Plurals](https://developer.mozilla.org/en-US/docs/Mozilla/Localization/Localization_and_Plurals)
 
 ### Plural rule #0 (1 form)
-
-Not implemented
+- Chinese (zh)
+- Japanese (ja)
+- Korean (ko)
+- Lao (lo)
+- Persian (fa)
+- Thai (th)
+- Turkish (tr)
 
 ### Plural rule #1 (2 forms)
 - Basque (eu)

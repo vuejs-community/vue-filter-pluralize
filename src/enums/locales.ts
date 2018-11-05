@@ -1,4 +1,12 @@
 export enum Locales {
+  Persian = 'fa',
+  Japanese = 'ja',
+  Korean = 'ko',
+  Lao = 'lo',
+  Thai = 'th',
+  Turkish = 'tr',
+  Chinese = 'zh',
+
   Catalan = 'ca',
   Danish = 'da',
   German = 'de',

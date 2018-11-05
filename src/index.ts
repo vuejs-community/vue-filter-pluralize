@@ -5,6 +5,10 @@ import { version } from '../package.json';
 
 class NotImplementedError extends Error {}
 
+const pluralizeRule0 = (input: number, case0: string): string => {
+  return case0;
+}
+
 const pluralizeRule1 = (input: number, case0: string, case1: string): string => {
   return input === 1 ? case0 : case1;
 }
@@ -13,6 +17,14 @@ export const pluralize = (locale: string, input: number, cases: string[]) => {
   input = Math.abs(input);
 
   switch (locale) {
+    case Locales.Persian:
+    case Locales.Japanese:
+    case Locales.Korean:
+    case Locales.Lao:
+    case Locales.Thai:
+    case Locales.Turkish:
+    case Locales.Chinese:
+      return pluralizeRule0(input, cases[0]);
     case Locales.Catalan:
     case Locales.Danish:
     case Locales.German:
