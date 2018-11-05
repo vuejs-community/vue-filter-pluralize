@@ -46,5 +46,7 @@ export enum Locales {
   Ukrainian = 'uk',
 
   Czech = 'cs',
-  Slovak = 'sk'
+  Slovak = 'sk',
+
+  Polish = 'pl'
 }
