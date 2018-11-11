@@ -33,11 +33,28 @@ const pluralizeRule4 = (input: number, rules: string[]): string => {
     return rules[1];
   }
 
-  if (input >= 3 || input <= 19) {
+  if (input >= 3 && input <= 19) {
     return rules[2];
   }
 
   return rules[3];
+};
+
+const pluralizeRule5 = (input: number, rules: string[]): string => {
+  if (input === 1) {
+    return rules[0];
+  }
+
+  if (input === 0) {
+    return rules[1];
+  }
+
+  input %= 100;
+  if (input >= 1 && input <= 19) {
+    return rules[1];
+  }
+
+  return rules[2];
 };
 
 const pluralizeRule7 = (input: number, rules: string[]): string => {
@@ -97,6 +114,8 @@ export const pluralizeFilter = (langCode: string, input: number, rules: string[]
       return pluralizeRule3(input, rules);
     case 'gd': // Scottish Gaelic
       return pluralizeRule4(input, rules);
+    case 'ro': // Romanian
+      return pluralizeRule5(input, rules);
     case 'be': // Belarusian
     case 'bs': // Bosnian
     case 'hr': // Croatian
