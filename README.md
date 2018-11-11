@@ -74,7 +74,7 @@ Vue.use(VueFilterPluralize)
 
 ### Plural rule #4 (4 forms)
 
-Not implemented
+- Scottish Gaelic (gd)
 
 ### Plural rule #5 (3 forms)
 
