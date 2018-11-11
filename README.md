@@ -95,7 +95,8 @@ Vue.use(VueFilterPluralize)
 
 ### Plural rule #8 (3 forms)
 
-Not implemented
+- Czech (cs)
+- Slovak (sk)
 
 ### Plural rule #9 (3 forms)
 
