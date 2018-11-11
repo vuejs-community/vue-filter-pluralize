@@ -82,7 +82,7 @@ Vue.use(VueFilterPluralize)
 
 ### Plural rule #6 (3 forms)
 
-Not implemented
+- Lithuanian (lt)
 
 ### Plural rule #7 (3 forms)
 

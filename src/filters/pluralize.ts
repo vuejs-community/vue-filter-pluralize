@@ -57,6 +57,24 @@ const pluralizeRule5 = (input: number, rules: string[]): string => {
   return rules[2];
 };
 
+const pluralizeRule6 = (input: number, rules: string[]): string => {
+  input % 100;
+  if (input >= 11 && input <= 19) {
+    return rules[1];
+  }
+
+  input %= 10;
+  if (input === 1) {
+    return rules[0];
+  }
+
+  if (input === 0) {
+    return rules[1];
+  }
+
+  return rules[2];
+};
+
 const pluralizeRule7 = (input: number, rules: string[]): string => {
   input %= 100;
   if (input >= 5 && input <= 20) {
@@ -116,6 +134,8 @@ export const pluralizeFilter = (langCode: string, input: number, rules: string[]
       return pluralizeRule4(input, rules);
     case 'ro': // Romanian
       return pluralizeRule5(input, rules);
+    case 'lt': // Lithuanian
+      return pluralizeRule6(input, rules);
     case 'be': // Belarusian
     case 'bs': // Bosnian
     case 'hr': // Croatian
