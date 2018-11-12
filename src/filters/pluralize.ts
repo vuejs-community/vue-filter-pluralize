@@ -122,6 +122,23 @@ const pluralizeRule9 = (input: number, rules: string[]): string => {
   return rules[2];
 };
 
+const pluralizeRule10 = (input: number, rules: string[]): string => {
+  input %= 100;
+  if (input === 1) {
+    return rules[0];
+  }
+
+  if (input === 2) {
+    return rules[1];
+  }
+
+  if (input === 3 || input === 4) {
+    return rules[2];
+  }
+
+  return rules[3];
+};
+
 export const pluralizeFilter = (langCode: string, input: number, rules: string[]) => {
   input = Math.abs(input);
 
@@ -177,6 +194,8 @@ export const pluralizeFilter = (langCode: string, input: number, rules: string[]
       return pluralizeRule8(input, rules);
     case 'pl': // Polish
       return pluralizeRule9(input, rules);
+    case 'sl': // Slovenian
+      return pluralizeRule10(input, rules);
     default:
       throw new NotImplementedError(`Method with language ${langCode} not implemented`);
   }

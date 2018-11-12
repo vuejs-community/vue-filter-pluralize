@@ -104,7 +104,7 @@ Vue.use(VueFilterPluralize)
 
 ### Plural rule #10 (4 forms)
 
-Not implemented
+- Slovenian (sl)
 
 ### Plural rule #11 (5 forms)
 
