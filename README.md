@@ -100,7 +100,7 @@ Vue.use(VueFilterPluralize)
 
 ### Plural rule #9 (3 forms)
 
-Not implemented
+- Polish (pl)
 
 ### Plural rule #10 (4 forms)
 
