@@ -58,7 +58,7 @@ const pluralizeRule5 = (input: number, case0: string, case1: string, case2: stri
 };
 
 const pluralizeRule6 = (input: number, case0: string, case1: string, case2: string): string => {
-  input % 100;
+  input %= 100;
   if (input >= 11 && input <= 19) {
     return case1;
   }
