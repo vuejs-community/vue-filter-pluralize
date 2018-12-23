@@ -4,9 +4,9 @@ Simple pluralize filter for Vue.js
 [![NPM Version](https://img.shields.io/npm/v/vue-filter-pluralize.svg)](https://www.npmjs.com/package/vue-filter-pluralize)
 [![License](https://img.shields.io/npm/l/vue-filter-pluralize.svg)](/LICENSE)
 [![Downloads](https://img.shields.io/npm/dm/vue-filter-pluralize.svg)](https://npmcharts.com/compare/vue-filter-pluralize?minimal=true)
-[![Dependencies](https://david-dm.org/eduardnikolenko/vue-filter-pluralize.svg)](https://david-dm.org/eduardnikolenko/vue-filter-pluralize)
-[![Dev Dependencies](https://david-dm.org/eduardnikolenko/vue-filter-pluralize/dev-status.svg)](https://david-dm.org/eduardnikolenko/vue-filter-pluralize/?type=dev)
-[![Peer Dependencies](https://david-dm.org/eduardnikolenko/vue-filter-pluralize/peer-status.svg)](https://david-dm.org/eduardnikolenko/vue-filter-pluralize?type=peer)
+[![Dependencies](https://img.shields.io/david/eduardnikolenko/vue-filter-pluralize.svg)](https://david-dm.org/eduardnikolenko/vue-filter-pluralize)
+[![Dev Dependencies](https://img.shields.io/david/dev/eduardnikolenko/vue-filter-pluralize.svg)](https://david-dm.org/eduardnikolenko/vue-filter-pluralize/?type=dev)
+[![Peer Dependencies](https://img.shields.io/david/peer/eduardnikolenko/vue-filter-pluralize.svg)](https://david-dm.org/eduardnikolenko/vue-filter-pluralize?type=peer)
 
 ## Installation
 
