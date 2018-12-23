@@ -2,6 +2,7 @@
 Simple pluralize filter for Vue.js
 
 [![NPM Version](https://img.shields.io/npm/v/vue-filter-pluralize.svg)](https://www.npmjs.com/package/vue-filter-pluralize)
+[![License](https://img.shields.io/npm/l/vue-filter-pluralize.svg)](/LICENSE)
 [![Dependencies](https://david-dm.org/eduardnikolenko/vue-filter-pluralize.svg)](https://david-dm.org/eduardnikolenko/vue-filter-pluralize)
 [![Dev Dependencies](https://david-dm.org/eduardnikolenko/vue-filter-pluralize/dev-status.svg)](https://david-dm.org/eduardnikolenko/vue-filter-pluralize/?type=dev)
 [![Peer Dependencies](https://david-dm.org/eduardnikolenko/vue-filter-pluralize/peer-status.svg)](https://david-dm.org/eduardnikolenko/vue-filter-pluralize?type=peer)
