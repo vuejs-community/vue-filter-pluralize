@@ -10,15 +10,15 @@ on:
 
 jobs:
   build:
-    name: Run on ${{ matrix.os }} with ${{ matrix.node_version }}
-    runs-on: ${{ matrix.os }}
+    name: Run on ${{ matrix.os }} with Node.js ${{ matrix.node }}
+    runs-on: ${{ matrix.os }}-latest
     steps:
       - name: Checkout
         uses: actions/checkout@v1
-      - name: Setup Node.js ${{ matrix.node_version }}
+      - name: Setup Node.js
         uses: actions/setup-node@v1
         with:
-          version: ${{ matrix.node_version }}
+          version: ${{ matrix.node }}
       - name: Install dependencies
         run: npm ci
       - name: Build
@@ -29,8 +29,8 @@ jobs:
         run: npm test
     strategy:
       matrix:
-        node_version: [10.x, 12.x]
-        os: [macos-latest, ubuntu-latest, windows-latest]
+        node: [10, 12]
+        os: [macos, ubuntu, windows]
 
   publish:
     name: Publish
@@ -39,15 +39,13 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v1
-      - name: Setup Node.js 12
+      - name: Setup Node.js
         uses: actions/setup-node@v1
         with:
           version: 12
           registry-url: https://npm.pkg.github.com/
-      - name: Install dependencies
-        run: npm ci
       - name: Publish
         if: github.event == 'push'
         run: npm publish
         env:
-          NODE_AUTH_TOKEN: ${{secrets.GITHUB_TOKEN}}
+          NODE_AUTH_TOKEN: ${{ secrets. NPM_AUTH_TOKEN }}
