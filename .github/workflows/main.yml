@@ -30,7 +30,7 @@ jobs:
     strategy:
       matrix:
         node: [10, 12]
-        os: [macos, ubuntu, windows]
+        os: [macOS, Ubuntu, Windows]
 
   publish:
     name: Publish
