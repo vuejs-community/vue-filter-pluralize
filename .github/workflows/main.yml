@@ -9,36 +9,31 @@ on:
       - master
 
 jobs:
-  install:
-    runs-on: ubuntu-latest
-    steps:
-      - name: Checkout
-        uses: actions/checkout@v1
-      - name: Setup Node.js 12
-        uses: actions/setup-node@v1
-        with:
-          version: 12
-      - name: Install dependencies
-        run: npm install
-
   build:
-    needs: install
+    name: Run on ${{ matrix.os }} with ${{ matrix.node_version }}
     runs-on: ${{ matrix.os }}
-    strategy:
-      matrix:
-        node-version: [10, 12]
-        os: [ubuntu-latest, windows-latest, macOS-latest]
     steps:
       - name: Checkout
         uses: actions/checkout@v1
-      - name: Setup Node.js ${{ matrix.node-version }}
+      - name: Setup Node.js ${{ matrix.node_version }}
         uses: actions/setup-node@v1
         with:
-          version: ${{ matrix.node-version }}
+          version: ${{ matrix.node_version }}
+      - name: Install dependencies
+        run: npm ci
       - name: Build
         run: npm run build
+      - name: Lint
+        run: npm run lint
+      - name: Test
+        run: npm test
+    strategy:
+      matrix:
+        node_version: [10.x, 12.x]
+        os: [macos-latest, ubuntu-latest, windows-latest]
 
   publish:
+    name: Publish
     needs: build
     runs-on: ubuntu-latest
     steps:
@@ -49,6 +44,8 @@ jobs:
         with:
           version: 12
           registry-url: https://npm.pkg.github.com/
+      - name: Install dependencies
+        run: npm ci
       - name: Publish
         if: github.event == 'push'
         run: npm publish
