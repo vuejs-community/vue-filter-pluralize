@@ -1,0 +1,56 @@
+name: Main Workflow
+
+on:
+  pull_request:
+    branches:
+      - master
+  push:
+    branches:
+      - master
+
+jobs:
+  install:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v1
+      - name: Setup Node.js 12
+        uses: actions/setup-node@v1
+        with:
+          version: 12
+      - name: Install dependencies
+        run: npm install
+
+  build:
+    needs: install
+    runs-on: ${{ matrix.os }}
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v1
+      - name: Setup Node.js ${{ matrix.node_version }}
+        uses: actions/setup-node@v1
+        with:
+          version: ${{ matrix.node_version }}
+      - name: Build
+        run: npm run build
+    strategy:
+      matrix:
+        node_version: [10, 12]
+        os: [ubuntu-latest, windows-latest, macOS-latest]
+
+  publish:
+    needs: build
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v1
+      - name: Setup Node.js 12
+        uses: actions/setup-node@v1
+        with:
+          version: 12
+          registry-url: https://npm.pkg.github.com/
+      - name: Publish
+        if: github.event == 'push'
+        run: npm publish
+        env:
+          NODE_AUTH_TOKEN: ${{secrets.GITHUB_TOKEN}}
