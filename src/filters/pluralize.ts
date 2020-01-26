@@ -150,7 +150,7 @@ export const pluralizeFilter = (input: number, langCode: string, cases: string[]
     case 'th': // Thai
     case 'tr': // Turkish
     case 'zh': // Chinese
-      return pluralizeRule0(input, ...cases);
+      return pluralizeRule0(input, cases[0]);
     case 'ca': // Catalan
     case 'da': // Danish
     case 'de': // German
@@ -170,32 +170,32 @@ export const pluralizeFilter = (input: number, langCode: string, cases: string[]
     case 'pt': // Portuguese
     case 'sv': // Swedish
     case 'vi': // Vietnamese
-      return pluralizeRule1(input, ...cases);
+      return pluralizeRule1(input, cases[0], cases[1]);
     case 'fr': // French
     case 'pt-BR': // Brazilian Portuguese
-      return pluralizeRule2(input, ...cases);
+      return pluralizeRule2(input, cases[0], cases[1]);
     case 'lv': // Latvian
-      return pluralizeRule3(input, ...cases);
+      return pluralizeRule3(input, cases[0], cases[1], cases[2]);
     case 'gd': // Scottish Gaelic
-      return pluralizeRule4(input, ...cases);
+      return pluralizeRule4(input, cases[0], cases[1], cases[2], cases[3]);
     case 'ro': // Romanian
-      return pluralizeRule5(input, ...cases);
+      return pluralizeRule5(input, cases[0], cases[1], cases[2]);
     case 'lt': // Lithuanian
-      return pluralizeRule6(input, ...cases);
+      return pluralizeRule6(input, cases[0], cases[1], cases[2]);
     case 'be': // Belarusian
     case 'bs': // Bosnian
     case 'hr': // Croatian
     case 'ru': // Russian
     case 'sr': // Serbian
     case 'uk': // Ukrainian
-      return pluralizeRule7(input, ...cases);
+      return pluralizeRule7(input, cases[0], cases[1], cases[2]);
     case 'cs': // Czech
     case 'sk': // Slovak
-      return pluralizeRule8(input, ...cases);
+      return pluralizeRule8(input, cases[0], cases[1], cases[2]);
     case 'pl': // Polish
-      return pluralizeRule9(input, ...cases);
+      return pluralizeRule9(input, cases[0], cases[1], cases[2]);
     case 'sl': // Slovenian
-      return pluralizeRule10(input, ...cases);
+      return pluralizeRule10(input, cases[0], cases[1], cases[2], cases[3]);
     default:
       throw new NotImplementedError(`Method with language ${langCode} not implemented`);
   }
