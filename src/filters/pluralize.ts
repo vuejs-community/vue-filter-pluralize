@@ -186,7 +186,7 @@ export const pluralizeFilter = (input: number, langCode: string, cases: string[]
     case 'bs': // Bosnian
     case 'hr': // Croatian
     case 'ru': // Russian
-    case 'sk': // Serbian
+    case 'sr': // Serbian
     case 'uk': // Ukrainian
       return pluralizeRule7(input, ...cases);
     case 'cs': // Czech
