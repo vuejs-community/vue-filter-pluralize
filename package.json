@@ -1,12 +1,12 @@
 {
-  "name": "vue-filter-pluralize",
+  "name": "@vuejs-community/vue-filter-pluralize",
   "description": "Simple pluralize filter for Vue.js",
   "keywords": [
     "vue",
     "vue-filter"
   ],
   "license": "MIT",
-  "version": "1.0.4",
+  "version": "1.0.5",
   "author": "Ed Nikolenko <4426698+ednikolenko@users.noreply.github.com>",
   "main": "dist/index.cjs.js",
   "module": "dist/index.esm.js",
@@ -19,20 +19,18 @@
   ],
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/ednikolenko/vue-filter-pluralize.git"
+    "url": "git+https://github.com/vuejs-community/vue-filter-pluralize.git"
   },
   "scripts": {
-    "build": "npm run build:esm && npm run build:cjs",
-    "build:cjs": "rollup --config rollup.config.js --format cjs --file dist/index.cjs.js",
-    "build:esm": "rollup --config rollup.config.js --format esm --file dist/index.esm.js",
+    "build": "rollup --config rollup.config.js",
     "lint": "tslint -p tsconfig.json -c tslint.json"
   },
   "devDependencies": {
-    "@rollup/plugin-json": "^4.0.1",
-    "@wessberg/rollup-plugin-ts": "^1.2.13",
-    "rollup": "^1.29.1",
-    "tslint": "^6.0.0",
-    "typescript": "^3.7.5",
+    "@rollup/plugin-json": "^4.0.2",
+    "@wessberg/rollup-plugin-ts": "^1.2.21",
+    "rollup": "^2.1.0",
+    "tslint": "^6.1.0",
+    "typescript": "^3.8.3",
     "vue": "^2.6.11"
   },
   "peerDependencies": {

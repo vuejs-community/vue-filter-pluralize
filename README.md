@@ -1,16 +1,16 @@
-# vue-filter-pluralize
+# @vuejs-community/vue-filter-pluralize
 Simple pluralize filter for Vue.js
 
 ## Installation
 
 install from npm
 ```bash
-$ npm install vue-filter-pluralize
+$ npm install @vuejs-community/vue-filter-pluralize
 ```
 and register in you Vue app
 ```js
 import Vue from 'vue';
-import VueFilterPluralize from 'vue-filter-pluralize';
+import VueFilterPluralize from '@vuejs-community/vue-filter-pluralize';
 
 Vue.use(VueFilterPluralize);
 ```
@@ -122,4 +122,4 @@ Not implemented
 
 ## License
 
-MIT © [Ed Nikolenko](https://github.com/ednikolenko)
+MIT © [Vue.js Community](https://github.com/vuejs-community)
