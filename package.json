@@ -7,10 +7,10 @@
   ],
   "license": "MIT",
   "version": "1.0.4",
-  "author": "Eduard Nikolenko <info@eduardnikolenko.com>",
+  "author": "Eduard Nikolenko <mail@eduardnikolenko.com>",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/eduardnikolenko/vue-filter-pluralize.git"
+    "url": "git+https://github.com/vuejs-community/vue-filter-pluralize.git"
   },
   "files": [
     "dist/vue-filter-pluralize.cjs.d.ts",
