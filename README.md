@@ -4,7 +4,7 @@ Simple pluralize filter for Vue.js
 [![NPM Version](https://img.shields.io/npm/v/vue-filter-pluralize.svg)](https://www.npmjs.com/package/vue-filter-pluralize)
 [![License](https://img.shields.io/npm/l/vue-filter-pluralize.svg)](/LICENSE)
 [![Downloads](https://img.shields.io/npm/dm/vue-filter-pluralize.svg)](https://npmcharts.com/compare/vue-filter-pluralize?minimal=true)
-[![Dependabot Status](https://api.dependabot.com/badges/status?host=github&repo=eduardnikolenko/vue-filter-pluralize)](https://dependabot.com)
+[![Dependabot Status](https://api.dependabot.com/badges/status?host=github&repo=vuejs-community/vue-filter-pluralize)](https://dependabot.com)
 
 ## Installation
 
