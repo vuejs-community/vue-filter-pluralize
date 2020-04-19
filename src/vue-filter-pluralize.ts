@@ -1,18 +1,21 @@
+import { VueConstructor } from 'vue';
+import { version } from '../package.json';
+
 class NotImplementedError extends Error {}
 
-const pluralizeRule0 = (input: number, case0: string): string => {
+function pluralizeRule0(input: number, case0: string): string {
   return case0;
-};
+}
 
-const pluralizeRule1 = (input: number, case0: string, case1: string): string => {
+function pluralizeRule1(input: number, case0: string, case1: string): string {
   return input === 1 ? case0 : case1;
-};
+}
 
-const pluralizeRule2 = (input: number, case0: string, case1: string): string => {
+function pluralizeRule2(input: number, case0: string, case1: string): string {
   return (input === 0 || input === 1) ? case0 : case1;
-};
+}
 
-const pluralizeRule3 = (input: number, case0: string, case1: string, case2: string): string => {
+function pluralizeRule3(input: number, case0: string, case1: string, case2: string): string {
   if (input === 0) {
     return case0;
   }
@@ -22,9 +25,9 @@ const pluralizeRule3 = (input: number, case0: string, case1: string, case2: stri
   }
 
   return case2;
-};
+}
 
-const pluralizeRule4 = (input: number, case0: string, case1: string, case2: string, case3: string): string => {
+function pluralizeRule4(input: number, case0: string, case1: string, case2: string, case3: string): string {
   if (input === 1 || input === 11) {
     return case0;
   }
@@ -38,9 +41,9 @@ const pluralizeRule4 = (input: number, case0: string, case1: string, case2: stri
   }
 
   return case3;
-};
+}
 
-const pluralizeRule5 = (input: number, case0: string, case1: string, case2: string): string => {
+function pluralizeRule5(input: number, case0: string, case1: string, case2: string): string {
   if (input === 1) {
     return case0;
   }
@@ -55,9 +58,9 @@ const pluralizeRule5 = (input: number, case0: string, case1: string, case2: stri
   }
 
   return case2;
-};
+}
 
-const pluralizeRule6 = (input: number, case0: string, case1: string, case2: string): string => {
+function pluralizeRule6(input: number, case0: string, case1: string, case2: string): string {
   input %= 100;
   if (input >= 11 && input <= 19) {
     return case1;
@@ -73,9 +76,9 @@ const pluralizeRule6 = (input: number, case0: string, case1: string, case2: stri
   }
 
   return case2;
-};
+}
 
-const pluralizeRule7 = (input: number, case0: string, case1: string, case2: string): string => {
+function pluralizeRule7(input: number, case0: string, case1: string, case2: string): string {
   input %= 100;
   if (input >= 5 && input <= 20) {
     return case2;
@@ -91,9 +94,9 @@ const pluralizeRule7 = (input: number, case0: string, case1: string, case2: stri
   }
 
   return case2;
-};
+}
 
-const pluralizeRule8 = (input: number, case0: string, case1: string, case2: string): string => {
+function pluralizeRule8(input: number, case0: string, case1: string, case2: string): string {
   if (input === 1) {
     return case0;
   }
@@ -103,9 +106,9 @@ const pluralizeRule8 = (input: number, case0: string, case1: string, case2: stri
   }
 
   return case2;
-};
+}
 
-const pluralizeRule9 = (input: number, case0: string, case1: string, case2: string): string => {
+function pluralizeRule9(input: number, case0: string, case1: string, case2: string): string {
   if (input === 1) {
     return case0;
   }
@@ -120,9 +123,9 @@ const pluralizeRule9 = (input: number, case0: string, case1: string, case2: stri
   }
 
   return case2;
-};
+}
 
-const pluralizeRule10 = (input: number, case0: string, case1: string, case2: string, case3: string): string => {
+function pluralizeRule10(input: number, case0: string, case1: string, case2: string, case3: string): string {
   input %= 100;
   if (input === 1) {
     return case0;
@@ -137,9 +140,9 @@ const pluralizeRule10 = (input: number, case0: string, case1: string, case2: str
   }
 
   return case3;
-};
+}
 
-export const pluralizeFilter = (input: number, langCode: string, cases: string[]) => {
+export function pluralize(input: number, langCode: string, cases: string[]): string {
   input = Math.abs(input);
 
   switch (langCode) {
@@ -199,4 +202,11 @@ export const pluralizeFilter = (input: number, langCode: string, cases: string[]
     default:
       throw new NotImplementedError(`Method with language ${langCode} not implemented`);
   }
+}
+
+export default {
+  install(Vue: VueConstructor): void {
+    Vue.filter('pluralize', pluralize);
+  },
+  version
 };

@@ -1,12 +1,12 @@
 {
-  "name": "vue-filter-pluralize",
+  "name": "@vuejs-community/vue-filter-pluralize",
   "description": "Simple pluralize filter for Vue.js",
   "keywords": [
     "vue",
     "vue-filter"
   ],
   "license": "MIT",
-  "version": "1.0.4",
+  "version": "1.0.5",
   "author": "Eduard Nikolenko <mail@eduardnikolenko.com>",
   "repository": {
     "type": "git",
@@ -22,9 +22,7 @@
   "module": "dist/vue-filter-pluralize.esm.js",
   "types": "dist/vue-filter-pluralize.esm.d.ts",
   "scripts": {
-    "build": "npm run build:esm && npm run build:cjs",
-    "build:cjs": "rollup --config rollup.config.js --format cjs --file dist/vue-filter-pluralize.cjs.js",
-    "build:esm": "rollup --config rollup.config.js --format esm --file dist/vue-filter-pluralize.esm.js",
+    "build": "rollup --config rollup.config.js",
     "lint": "tslint -p tsconfig.json -c tslint.json"
   },
   "devDependencies": {
