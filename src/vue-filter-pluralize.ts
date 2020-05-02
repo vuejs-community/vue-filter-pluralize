@@ -1,4 +1,5 @@
 import { VueConstructor } from 'vue';
+
 import { version } from '../package.json';
 
 class NotImplementedError extends Error {}

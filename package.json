@@ -26,10 +26,10 @@
     "lint": "tslint -p tsconfig.json -c tslint.json"
   },
   "devDependencies": {
-    "@rollup/plugin-json": "^4.0.2",
-    "@wessberg/rollup-plugin-ts": "^1.2.21",
-    "rollup": "^2.1.0",
-    "tslint": "^6.1.0",
+    "@rollup/plugin-json": "^4.0.3",
+    "@wessberg/rollup-plugin-ts": "^1.2.24",
+    "rollup": "^2.7.6",
+    "tslint": "^6.1.2",
     "typescript": "^3.8.3",
     "vue": "^2.6.11"
   },
