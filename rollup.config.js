@@ -13,7 +13,7 @@ export default {
     {
       exports: 'named',
       file: 'dist/vue-filter-pluralize.cjs.js',
-      format: 'system',
+      format: 'commonjs',
       sourcemap: true
     }
   ],
