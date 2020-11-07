@@ -16,7 +16,9 @@
     "dist/vue-filter-pluralize.cjs.d.ts",
     "dist/vue-filter-pluralize.cjs.js",
     "dist/vue-filter-pluralize.esm.d.ts",
-    "dist/vue-filter-pluralize.esm.js"
+    "dist/vue-filter-pluralize.esm.js",
+    "dist/vue-filter-pluralize.umd.d.ts",
+    "dist/vue-filter-pluralize.umd.js"
   ],
   "main": "dist/vue-filter-pluralize.cjs.js",
   "module": "dist/vue-filter-pluralize.esm.js",
