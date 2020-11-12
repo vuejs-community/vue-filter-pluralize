@@ -19,11 +19,13 @@ Vue.use(VueFilterPluralize);
 
 ```html
 <template>
-  <div>{{ number }} {{ number | pluralize('ru', ['штука', 'штуки', 'штук']) }}</div>
+  <div>{{ number }} {{ number | pluralize('en', ['product', 'products']) }}</div>
 </template>
 ```
 
 ## Supported languages
+
+[Localization and Plurals](https://developer.mozilla.org/en-US/docs/Mozilla/Localization/Localization_and_Plurals)
 
 ### Plural rule #0 (1 form)
 
