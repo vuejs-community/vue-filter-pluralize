@@ -1,7 +1,8 @@
-import { VueConstructor } from 'vue';
+import { Locales } from './enums/locales.ts';
 
-import { Locales } from './enums/locales';
-import { version } from '../package.json';
+type VueConstructor = {
+  filter(id: string, definition?: Function): Function;
+};
 
 class NotImplementedError extends Error {}
 
@@ -209,6 +210,5 @@ export const pluralize = (locale: Locales, input: number, cases: string[]) => {
 export default {
   install(Vue: VueConstructor): void {
     Vue.filter('pluralize', pluralize);
-  },
-  version
+  }
 };
